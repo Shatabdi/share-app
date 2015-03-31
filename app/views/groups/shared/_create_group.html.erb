@@ -1,0 +1,24 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for @group, :remote => true do |f| %>
+      <div class="modal-header">
+        <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+        <h4 class="modal-title">Create Group</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="name">Group Name</label>
+          <%= f.text_field :name, :class =>"form-control", :placeholder => "Group Name" %>
+        </div>
+        <div class="form-group">
+          <label for="emails">Enter emails to send invitations for joining the group</label>
+          <%= text_area_tag :emails,nil ,:class =>"form-control", :placeholder => "enter emails separated by comma" %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+        <%= f.submit "Create", :class => "btn btn-default " %>
+      </div>
+    <% end %>
+  </div>
+</div>

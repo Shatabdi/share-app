@@ -1,0 +1,7 @@
+development:
+ adapter: postgresql
+ encoding: unicode
+ database: share_application
+ username: postgres
+ password: mindfire
+ host: localhost
